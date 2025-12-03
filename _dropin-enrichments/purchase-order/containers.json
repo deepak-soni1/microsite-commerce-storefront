@@ -1,0 +1,262 @@
+{
+  "ApprovalRuleDetails": {
+    "parameters": {
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      },
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "approvalRuleID": {
+        "description": "ID of the approval rule to display."
+      },
+      "routeApprovalRulesList": {
+        "description": "Function to generate URL for navigating back to approval rules list."
+      }
+    },
+    "description": "Displays detailed information about a specific approval rule."
+  },
+  "ApprovalRuleForm": {
+    "parameters": {
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      },
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "approvalRuleID": {
+        "description": "ID of the approval rule to edit. Omit for creating new rules."
+      },
+      "routeApprovalRulesList": {
+        "description": "Function to generate URL for navigating back to approval rules list."
+      },
+      "onSubmit": {
+        "description": "Callback triggered when form is submitted. Use for custom success handling or navigation."
+      },
+      "onChange": {
+        "description": "Callback triggered when form values change. Use for real-time validation or tracking."
+      }
+    },
+    "description": "Form for creating or editing approval rules."
+  },
+  "ApprovalRulesList": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      },
+      "initialPageSize": {
+        "description": "Initial page size options for table pagination."
+      },
+      "routeCreateApprovalRule": {
+        "description": "Function to generate URL for creating new approval rules."
+      },
+      "routeEditApprovalRule": {
+        "description": "Function to generate URL for editing approval rules. Receives rule ID."
+      },
+      "routeApprovalRuleDetails": {
+        "description": "Function to generate URL for viewing approval rule details. Receives rule ID."
+      },
+      "setColumns": {
+        "description": "Callback to customize table columns. Use to show/hide or reorder columns."
+      },
+      "setRowsData": {
+        "description": "Callback to transform row data before display. Use for custom formatting or filtering."
+      },
+      "skeletonRowCount": {
+        "description": "Number of skeleton rows shown while loading."
+      }
+    },
+    "description": "Paginated table of approval rules with create, edit, and view actions."
+  },
+  "CompanyPurchaseOrders": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      },
+      "initialPageSize": {
+        "description": "Initial page size options for table pagination."
+      },
+      "routePurchaseOrderDetails": {
+        "description": "Function to generate URL for viewing purchase order details. Receives PO ID."
+      },
+      "setColumns": {
+        "description": "Callback to customize table columns. Use to show/hide or reorder columns."
+      },
+      "setRowsData": {
+        "description": "Callback to transform row data before display. Use for custom formatting or filtering."
+      },
+      "skeletonRowCount": {
+        "description": "Number of skeleton rows shown while loading."
+      }
+    },
+    "description": "Paginated table of company-wide purchase orders with filtering and actions."
+  },
+  "CustomerPurchaseOrders": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      },
+      "initialPageSize": {
+        "description": "Initial page size options for table pagination."
+      },
+      "routePurchaseOrderDetails": {
+        "description": "Function to generate URL for viewing purchase order details. Receives PO ID."
+      },
+      "setColumns": {
+        "description": "Callback to customize table columns. Use to show/hide or reorder columns."
+      },
+      "setRowsData": {
+        "description": "Callback to transform row data before display. Use for custom formatting or filtering."
+      },
+      "skeletonRowCount": {
+        "description": "Number of skeleton rows shown while loading."
+      }
+    },
+    "description": "Paginated table of customer's purchase orders with filtering and actions."
+  },
+  "PurchaseOrderApprovalFlow": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      }
+    },
+    "description": "Displays approval workflow visualization for a purchase order."
+  },
+  "PurchaseOrderCommentForm": {
+    "parameters": {
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      },
+      "className": {
+        "description": "CSS classes for custom styling."
+      }
+    },
+    "description": "Form for adding comments to a purchase order."
+  },
+  "PurchaseOrderCommentsList": {
+    "parameters": {
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      },
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "visibleRecordsLimit": {
+        "description": "Maximum comments shown initially. Additional comments revealed via 'Show More'."
+      }
+    },
+    "description": "Displays conversation history for a purchase order with show more support."
+  },
+  "PurchaseOrderConfirmation": {
+    "parameters": {
+      "purchaseOrderNumber": {
+        "description": "Purchase order number to display in confirmation."
+      },
+      "routePurchaseOrderDetails": {
+        "description": "Function to generate URL for viewing purchase order details."
+      }
+    },
+    "description": "Confirmation screen after purchase order creation showing PO number and details link."
+  },
+  "PurchaseOrderHistoryLog": {
+    "parameters": {
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      },
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "visibleRecordsLimit": {
+        "description": "Maximum history entries shown initially. Additional entries revealed via 'Show More'."
+      }
+    },
+    "description": "Displays chronological activity log for a purchase order with show more support."
+  },
+  "PurchaseOrderStatus": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      }
+    },
+    "slots": {
+      "PurchaseOrderActions": {
+        "description": "Customize action buttons for purchase order operations (approve, reject, cancel, place order)."
+      }
+    },
+    "description": "Displays purchase order status with action buttons (approve, reject, cancel, place order)."
+  },
+  "RequireApprovalPurchaseOrders": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "withHeader": {
+        "description": "Shows/hides header section. Set false when embedding in layouts with their own headers."
+      },
+      "withWrapper": {
+        "description": "Wraps container in styled wrapper. Set false for custom styling or embedded use."
+      },
+      "initialPageSize": {
+        "description": "Initial page size options for table pagination."
+      },
+      "routePurchaseOrderDetails": {
+        "description": "Function to generate URL for viewing purchase order details. Receives PO ID."
+      },
+      "setColumns": {
+        "description": "Callback to customize table columns. Use to show/hide or reorder columns."
+      },
+      "setRowsData": {
+        "description": "Callback to transform row data before display. Use for custom formatting or filtering."
+      },
+      "skeletonRowCount": {
+        "description": "Number of skeleton rows shown while loading."
+      }
+    },
+    "description": "Paginated table of purchase orders requiring approval with filtering and actions."
+  }
+}

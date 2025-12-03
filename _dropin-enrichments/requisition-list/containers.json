@@ -1,0 +1,92 @@
+{
+  "RequisitionListForm": {
+    "parameters": {
+      "mode": {
+        "description": "Form mode: 'create', 'edit', or 'rename'."
+      },
+      "requisitionListUid": {
+        "description": "Requisition list UID. Required for edit/rename modes."
+      },
+      "defaultValues": {
+        "description": "Default form values (name and description)."
+      },
+      "onSuccess": {
+        "description": "Callback on successful operation. Receives created/updated list."
+      },
+      "onError": {
+        "description": "Callback on error. Receives error message."
+      },
+      "onCancel": {
+        "description": "Callback when form is cancelled."
+      }
+    },
+    "description": "Form for creating, editing, or renaming requisition lists."
+  },
+  "RequisitionListGrid": {
+    "parameters": {
+      "routeRequisitionListDetails": {
+        "description": "Function to generate URL for requisition list details. Receives list UID."
+      }
+    },
+    "slots": {
+      "Header": {
+        "description": "Customize grid header section."
+      }
+    },
+    "description": "Grid view of all requisition lists with create, rename, and delete actions."
+  },
+  "RequisitionListHeader": {
+    "parameters": {
+      "requisitionList": {
+        "description": "Requisition list object to display."
+      },
+      "routeRequisitionListGrid": {
+        "description": "Function to generate URL for navigating back to grid view."
+      },
+      "onUpdate": {
+        "description": "Callback when list is updated. Receives updated list data."
+      }
+    },
+    "description": "Header for requisition list detail view with back navigation and list actions."
+  },
+  "RequisitionListSelector": {
+    "parameters": {
+      "canCreate": {
+        "description": "Enables creation of new requisition lists when true."
+      },
+      "sku": {
+        "description": "Product SKU to add to list."
+      },
+      "selectedOptions": {
+        "description": "Array of selected option UIDs for configurable products."
+      },
+      "quantity": {
+        "description": "Quantity to add. Defaults to 1."
+      },
+      "beforeAddProdToReqList": {
+        "description": "Callback before adding product. Use for validation (for example checking required options). Throw error to prevent modal opening."
+      }
+    },
+    "description": "Dropdown selector for adding products to requisition lists with create option."
+  },
+  "RequisitionListView": {
+    "parameters": {
+      "requisitionListUid": {
+        "description": "UID of requisition list to display (base64-encoded)."
+      },
+      "skipProductLoading": {
+        "description": "Skips automatic product loading when true. Used in tests."
+      },
+      "pageSize": {
+        "description": "Number of items per page for pagination."
+      },
+      "selectedItems": {
+        "description": "Set of selected item IDs for bulk operations."
+      },
+      "routeRequisitionListGrid": {
+        "description": "Function to generate URL for navigating back to grid view."
+      }
+    },
+    "description": "Detail view of a requisition list showing items with pagination and bulk actions."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "CompanyCredit": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "withHeader": {
+        "description": "Shows/hides header section."
+      },
+      "creditHistoryParams": {
+        "description": "Optional parameters for credit history filtering and pagination."
+      },
+      "showCreditHistory": {
+        "description": "Shows/hides credit history section."
+      }
+    },
+    "description": "Displays company credit information and optional credit history with filtering."
+  },
+  "CompanyProfile": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "withHeader": {
+        "description": "Shows/hides header section."
+      }
+    },
+    "slots": {
+      "CompanyData": {
+        "description": "Customize company profile information display."
+      }
+    },
+    "description": "Displays and manages company profile information."
+  },
+  "CompanyRegistration": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "isAuthenticated": {
+        "description": "Indicates authentication status. Use to conditionally show registration or redirect."
+      },
+      "onRedirectLogin": {
+        "description": "Callback to redirect to login. Use for custom login routing."
+      },
+      "onRedirectAccount": {
+        "description": "Callback to redirect to account after registration. Use for custom navigation."
+      },
+      "onSuccess": {
+        "description": "Callback on successful registration. Use for custom success handling."
+      },
+      "onError": {
+        "description": "Callback on error. Use for custom error handling."
+      }
+    },
+    "description": "Registration form for creating new company accounts."
+  },
+  "CompanyStructure": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "withHeader": {
+        "description": "Shows/hides header section."
+      },
+      "isAuthenticated": {
+        "description": "Indicates authentication status. Use to conditionally render content or trigger login."
+      },
+      "onRedirectLogin": {
+        "description": "Callback to redirect to login. Use for custom login routing."
+      },
+      "onRedirectAccount": {
+        "description": "Callback to redirect to account. Use for custom navigation."
+      }
+    },
+    "slots": {
+      "StructureData": {
+        "description": "Customize company structure hierarchy display."
+      }
+    },
+    "description": "Hierarchical display of company organizational structure."
+  },
+  "CompanyUsers": {
+    "description": "Manages company user accounts and assignments."
+  },
+  "CustomerCompanyInfo": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      }
+    },
+    "description": "Displays customer's company information and role."
+  },
+  "RolesAndPermissions": {
+    "parameters": {
+      "className": {
+        "description": "CSS classes for custom styling."
+      },
+      "withHeader": {
+        "description": "Shows/hides header section."
+      }
+    },
+    "description": "Manages company roles and permission assignments."
+  }
+}

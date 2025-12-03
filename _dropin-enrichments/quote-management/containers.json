@@ -1,0 +1,474 @@
+{
+  "ItemsQuoted": {
+    "parameters": {
+      "quoteData": {
+        "description": "Quote data object. Auto-populated from drop-in state when omitted."
+      },
+      "onItemCheckboxChange": {
+        "description": "Callback when item checkbox is toggled. Use for tracking selections or custom validation."
+      },
+      "onItemDropdownChange": {
+        "description": "Callback when item action dropdown changes. Use for custom action handling or analytics."
+      },
+      "onUpdate": {
+        "description": "Callback on form submission (quantity/note updates). Use for custom validation or tracking."
+      },
+      "onRemoveItemsRef": {
+        "description": "Provides access to internal item removal handler. Use for custom removal workflows."
+      },
+      "onRemoveModalStateChange": {
+        "description": "Callback when remove confirmation modal opens/closes. Use for tracking or custom modal logic."
+      }
+    },
+    "slots": {
+      "ProductListTable": {
+        "description": "Customize the entire product list display. Use for custom columns, filtering, or table layout."
+      },
+      "QuotePricesSummary": {
+        "description": "Customize pricing summary section. Use for custom pricing displays or additional summary information."
+      }
+    },
+    "description": "Displays quoted items with product details, quantities, pricing, and editing controls."
+  },
+  "ItemsQuotedTemplate": {
+    "parameters": {
+      "templateData": {
+        "description": "Template data object. Auto-populated from drop-in state when omitted."
+      }
+    },
+    "slots": {
+      "ProductListTable": {
+        "description": "Customize the product list display for templates."
+      },
+      "QuotePricesSummary": {
+        "description": "Customize pricing summary for templates."
+      }
+    },
+    "description": "Displays items in a quote template for reuse in future quote requests."
+  },
+  "ManageNegotiableQuote": {
+    "parameters": {
+      "maxFiles": {
+        "description": "Maximum attachments when sending quote for review."
+      },
+      "maxFileSize": {
+        "description": "Maximum file size in bytes for attachments."
+      },
+      "acceptedFileTypes": {
+        "description": "Array of allowed MIME types (for example ['application/pdf', 'image/png'])."
+      },
+      "onActionsDropdownChange": {
+        "description": "Callback when actions dropdown selection changes. Use for tracking or custom validation."
+      },
+      "onActionsButtonClick": {
+        "description": "Callback when action button is clicked. Use for intercepting actions or analytics."
+      },
+      "onSendForReview": {
+        "description": "Callback when quote is sent for review. Use for custom submission logic or tracking."
+      },
+      "onDuplicateQuote": {
+        "description": "Callback when quote is duplicated. Use for custom navigation or tracking."
+      }
+    },
+    "slots": {
+      "QuoteName": {
+        "description": "Customize quote name display and editing."
+      },
+      "QuoteStatus": {
+        "description": "Customize quote status badge."
+      },
+      "Banner": {
+        "description": "Customize alert banner for quote states (submitted, pending, expired)."
+      },
+      "Details": {
+        "description": "Customize quote metadata (created date, sales rep, expiration)."
+      },
+      "ActionBar": {
+        "description": "Customize action buttons and dropdown menu."
+      },
+      "QuoteContent": {
+        "description": "Customize entire tabbed content area."
+      },
+      "ItemsQuotedTab": {
+        "description": "Customize Items Quoted tab content."
+      },
+      "CommentsTab": {
+        "description": "Customize Comments tab content."
+      },
+      "HistoryLogTab": {
+        "description": "Customize History Log tab content."
+      },
+      "ShippingInformationTitle": {
+        "description": "Customize shipping section heading."
+      },
+      "ShippingInformation": {
+        "description": "Customize shipping address display and selection."
+      },
+      "QuoteCommentsTitle": {
+        "description": "Customize quote comments section heading."
+      },
+      "QuoteComments": {
+        "description": "Customize comment input field."
+      },
+      "AttachFilesField": {
+        "description": "Customize file attachment input control."
+      },
+      "AttachedFilesList": {
+        "description": "Customize attached files display."
+      },
+      "Footer": {
+        "description": "Customize Send for Review button and footer actions."
+      }
+    },
+    "description": "Comprehensive quote management with details, actions, shipping, comments, and history."
+  },
+  "ManageNegotiableQuoteTemplate": {
+    "parameters": {
+      "onActionsButtonClick": {
+        "description": "Callback when action button is clicked."
+      },
+      "onSendForReview": {
+        "description": "Callback when template is sent for review."
+      }
+    },
+    "slots": {
+      "TemplateName": {
+        "description": "Customize template name display."
+      },
+      "TemplateId": {
+        "description": "Customize template ID display."
+      },
+      "Banner": {
+        "description": "Customize alert banner for template states."
+      },
+      "Details": {
+        "description": "Customize template metadata display."
+      },
+      "ActionBar": {
+        "description": "Customize action buttons."
+      },
+      "ReferenceDocumentsTitle": {
+        "description": "Customize reference documents section heading."
+      },
+      "ReferenceDocuments": {
+        "description": "Customize reference documents display."
+      }
+    },
+    "description": "Template-specific quote management interface with template actions and details."
+  },
+  "OrderSummary": {
+    "parameters": {
+      "showTotalSaved": {
+        "description": "Shows/hides total savings amount."
+      },
+      "updateLineItems": {
+        "description": "Callback to transform line items before display. Use for custom line item logic."
+      }
+    },
+    "description": "Pricing breakdown showing subtotal, discounts, taxes, and grand total."
+  },
+  "OrderSummaryLine": {
+    "parameters": {
+      "label": {
+        "description": "Label text or component for the line item."
+      },
+      "price": {
+        "description": "Price component for the line item."
+      },
+      "classSuffixes": {
+        "description": "Array of CSS class suffixes for styling variants."
+      },
+      "labelClassSuffix": {
+        "description": "CSS class suffix specifically for the label."
+      },
+      "testId": {
+        "description": "Test ID for automated testing."
+      }
+    },
+    "description": "Individual line item in the order summary displaying label and price."
+  },
+  "QuoteCommentsList": {
+    "parameters": {
+      "quoteData": {
+        "description": "Quote data object. Auto-populated from drop-in state when omitted."
+      }
+    },
+    "description": "Displays conversation history for a quote."
+  },
+  "QuoteHistoryLog": {
+    "parameters": {
+      "quoteData": {
+        "description": "Quote data object. Auto-populated from drop-in state when omitted."
+      }
+    },
+    "description": "Displays chronological activity log for a quote."
+  },
+  "QuoteSummaryList": {
+    "parameters": {
+      "hideHeading": {
+        "description": "Hides the list heading when true."
+      },
+      "hideFooter": {
+        "description": "Hides item footers when true."
+      },
+      "routeProduct": {
+        "description": "Function to generate product detail URLs. Receives item data."
+      },
+      "showMaxItems": {
+        "description": "Shows maximum item count indicator when true."
+      },
+      "attributesToHide": {
+        "description": "Array of product attributes to hide from display."
+      },
+      "accordion": {
+        "description": "Enables accordion-style collapsible items when true."
+      },
+      "variant": {
+        "description": "Visual variant (primary or secondary)."
+      },
+      "showDiscount": {
+        "description": "Shows discount information when true."
+      },
+      "showSavings": {
+        "description": "Shows savings amount when true."
+      }
+    },
+    "slots": {
+      "Heading": {
+        "description": "Customize list heading."
+      },
+      "Footer": {
+        "description": "Customize item footer."
+      },
+      "Thumbnail": {
+        "description": "Customize product thumbnail."
+      },
+      "ProductAttributes": {
+        "description": "Customize product attributes display."
+      },
+      "QuoteSummaryFooter": {
+        "description": "Customize summary footer."
+      },
+      "QuoteItem": {
+        "description": "Customize entire quote item display."
+      },
+      "ItemTitle": {
+        "description": "Customize item title."
+      },
+      "ItemPrice": {
+        "description": "Customize item price display."
+      },
+      "ItemTotal": {
+        "description": "Customize item total display."
+      },
+      "ItemSku": {
+        "description": "Customize SKU display."
+      }
+    },
+    "description": "Displays quote items in a summary list format with accordion support."
+  },
+  "QuoteTemplateCommentsList": {
+    "parameters": {
+      "templateData": {
+        "description": "Template data object. Auto-populated from drop-in state when omitted."
+      }
+    },
+    "description": "Displays conversation history for a quote template."
+  },
+  "QuoteTemplateHistoryLog": {
+    "parameters": {
+      "templateData": {
+        "description": "Template data object. Auto-populated from drop-in state when omitted."
+      }
+    },
+    "description": "Displays chronological activity log for a quote template."
+  },
+  "QuoteTemplatesListTable": {
+    "parameters": {
+      "pageSize": {
+        "description": "Number of items per page."
+      },
+      "showItemRange": {
+        "description": "Shows item range indicator when true."
+      },
+      "showPageSizePicker": {
+        "description": "Shows page size selector when true."
+      },
+      "showPagination": {
+        "description": "Shows pagination controls when true."
+      },
+      "onViewQuoteTemplate": {
+        "description": "Callback when viewing a template. Receives template ID, name, and status."
+      },
+      "onGenerateQuoteFromTemplate": {
+        "description": "Callback when generating quote from template. Receives template and quote IDs."
+      },
+      "onPageSizeChange": {
+        "description": "Callback when page size changes."
+      },
+      "onPageChange": {
+        "description": "Callback when page changes."
+      }
+    },
+    "description": "Paginated table of quote templates with view and generate actions.",
+    "slots": {
+      "Name": {
+        "description": "Customize template name cell."
+      },
+      "State": {
+        "description": "Customize state cell (active/inactive)."
+      },
+      "Status": {
+        "description": "Customize status cell."
+      },
+      "ValidUntil": {
+        "description": "Customize valid until date cell."
+      },
+      "MinQuoteTotal": {
+        "description": "Customize minimum quote total cell."
+      },
+      "OrdersPlaced": {
+        "description": "Customize orders placed count cell."
+      },
+      "LastOrdered": {
+        "description": "Customize last ordered date cell."
+      },
+      "Actions": {
+        "description": "Customize actions cell (view, generate quote buttons)."
+      },
+      "EmptyTemplates": {
+        "description": "Customize empty state message when no templates exist."
+      },
+      "ItemRange": {
+        "description": "Customize item range display (for example '1-10 of 50')."
+      },
+      "PageSizePicker": {
+        "description": "Customize page size selector."
+      },
+      "Pagination": {
+        "description": "Customize pagination controls."
+      }
+    }
+  },
+  "QuotesListTable": {
+    "parameters": {
+      "pageSize": {
+        "description": "Number of items per page."
+      },
+      "showItemRange": {
+        "description": "Shows item range indicator when true."
+      },
+      "showPageSizePicker": {
+        "description": "Shows page size selector when true."
+      },
+      "showPagination": {
+        "description": "Shows pagination controls when true."
+      },
+      "onViewQuote": {
+        "description": "Callback when viewing a quote. Receives quote ID, name, and status."
+      },
+      "onPageSizeChange": {
+        "description": "Callback when page size changes."
+      },
+      "onPageChange": {
+        "description": "Callback when page changes."
+      }
+    },
+    "slots": {
+      "QuoteName": {
+        "description": "Customize quote name cell."
+      },
+      "Created": {
+        "description": "Customize created date cell."
+      },
+      "CreatedBy": {
+        "description": "Customize created by (buyer name) cell."
+      },
+      "Status": {
+        "description": "Customize status cell."
+      },
+      "LastUpdated": {
+        "description": "Customize last updated date cell."
+      },
+      "QuoteTemplate": {
+        "description": "Customize quote template reference cell."
+      },
+      "QuoteTotal": {
+        "description": "Customize quote total amount cell."
+      },
+      "Actions": {
+        "description": "Customize actions cell (view button)."
+      },
+      "EmptyQuotes": {
+        "description": "Customize empty state message when no quotes exist."
+      },
+      "ItemRange": {
+        "description": "Customize item range display (for example '1-10 of 50')."
+      },
+      "PageSizePicker": {
+        "description": "Customize page size selector."
+      },
+      "Pagination": {
+        "description": "Customize pagination controls."
+      }
+    },
+    "description": "Paginated table of quotes with view actions and customizable columns."
+  },
+  "RequestNegotiableQuoteForm": {
+    "parameters": {
+      "cartId": {
+        "description": "Cart ID to create quote from."
+      },
+      "maxFiles": {
+        "description": "Maximum attachments for quote request."
+      },
+      "maxFileSize": {
+        "description": "Maximum file size in bytes for attachments."
+      },
+      "acceptedFileTypes": {
+        "description": "Array of allowed MIME types."
+      }
+    },
+    "slots": {
+      "ErrorBanner": {
+        "description": "Customize error message display."
+      },
+      "SuccessBanner": {
+        "description": "Customize success message display after quote creation."
+      },
+      "Title": {
+        "description": "Customize form title heading."
+      },
+      "CommentField": {
+        "description": "Customize comment textarea field with validation."
+      },
+      "QuoteNameField": {
+        "description": "Customize quote name input field with validation."
+      },
+      "AttachFileField": {
+        "description": "Customize file attachment input control."
+      },
+      "AttachedFilesList": {
+        "description": "Customize attached files display with remove functionality."
+      },
+      "RequestButton": {
+        "description": "Customize request quote submission button."
+      },
+      "SaveDraftButton": {
+        "description": "Customize save draft button."
+      }
+    },
+    "description": "Form for creating new quote requests from cart with attachments support."
+  },
+  "ShippingAddressDisplay": {
+    "parameters": {
+      "quoteData": {
+        "description": "Quote data object. Auto-populated from drop-in state when omitted."
+      },
+      "loading": {
+        "description": "Shows loading state when true."
+      }
+    },
+    "description": "Displays shipping address for a quote with loading state support."
+  }
+}
